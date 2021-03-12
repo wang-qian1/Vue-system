@@ -1,0 +1,60 @@
+{
+  "LOGO": {
+    "id": "1",
+    "img": "/imgs/logo.png",
+    "title": "疫情防控管理系统"
+  },
+  "nav": [
+    {
+      "icon": "el-icon-s-platform",
+      "title": "疫情数据",
+      "child": [
+        {
+          "title": "数据概览",
+          "path": "/welcome"
+        },
+        {
+          "title": "数据分析",
+          "path": "/profile"
+        }
+      ]
+    },
+    {
+      "icon": "fa fa-book",
+      "title": "疫情资讯",
+      "child": [
+        {
+          "title": "文章资讯",
+          "path": "/quillEditor"
+        },
+        {
+          "title": "谣言粉碎机",
+          "path": "/articleManager"
+        }
+      ]
+    },
+    {
+      "icon": "el-icon-chat-line-square",
+      "title": "每日打卡",
+      "path": "/mail"
+    },
+    {
+      "icon": "el-icon-setting",
+      "title": "基础设置",
+      "child": [
+        {
+          "title": "设置导航",
+          "path": "/nav"
+        },
+        {
+          "title": "设置个人信息",
+          "path": "/mineInfo"
+        },
+        {
+          "title": "修改密码",
+          "path": "/updatePass"
+        }
+      ]
+    }
+  ]
+}
