@@ -22,7 +22,7 @@ NProgress.configure({
 /*
 * 全局前置路由 在路由进入前start进度条
 * */
-router.beforeEach((to, from ,next) => {
+router.beforeEach((to, from, next) => {
   NProgress.start()
   next()
 })
@@ -30,7 +30,7 @@ router.beforeEach((to, from ,next) => {
 /*
 * 全局后置路由 在路由完成时done进度条
 * */
-router.afterEach( () => {
+router.afterEach(() => {
   NProgress.done()
 })
 

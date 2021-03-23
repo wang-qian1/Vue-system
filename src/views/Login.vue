@@ -109,9 +109,9 @@
             axiosUtil({
               url: '/login',
               method: 'post',
-              params: {
+              data: {
                 username: this.loginForm.username,
-                password: this.loginForm.password,
+                password: this.loginForm.password
               }
             }).then(data => {
               if (data != null && data != '') {
@@ -143,7 +143,7 @@
                 profile.password = this.loginForm.password
                 sessionStorage.setItem("profile", JSON.stringify({
                   username: profile.username,
-                  token: '154954264jun'
+                  token: 'wq12138'
                 }))
                 this.$message({
                   type: 'success',

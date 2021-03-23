@@ -109,7 +109,7 @@
         if (value != '') {
           axiosUtil({
             url: '/checkVerify',
-            method: 'post',
+            method: 'get',
             params: {
               code: value
             }
@@ -199,7 +199,7 @@
               axiosUtil({
                 url: '/register',
                 method: 'post',
-                params: {
+                data: {
                   username: this.registerForm.username,
                   password: this.registerForm.password,
                   email: this.registerForm.email

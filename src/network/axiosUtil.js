@@ -1,5 +1,6 @@
 import Axios from "axios";
 export function axiosUtil(config) {
+  Axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
   const instance = Axios.create({
     baseURL: 'api',
     timeout: 5000,

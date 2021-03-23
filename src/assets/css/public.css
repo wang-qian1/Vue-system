@@ -74,3 +74,11 @@ a {
   -moz-transition: all .3s ease-in-out;
 }
 
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.pull-right {
+  float: right;
+}
+
