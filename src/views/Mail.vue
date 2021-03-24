@@ -183,8 +183,8 @@
         this.page = currPage
       },
       queryTable() {
-        let profile = JSON.parse(sessionStorage.getItem("profile"))
-        this.username = profile.username
+        this.username = this.$store.state.userInfo.user.username
+        console.log(this.$store.state.userInfo.user)
         axiosUtil({
           url: '/message/find',
           method: 'get',

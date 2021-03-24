@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import store from '../store/store'
 
 Vue.use(VueRouter)
 
@@ -112,10 +113,11 @@ const router = new VueRouter({
 * */
 router.beforeEach((to, from, next) => {
   //校验是否登录，防止不登录，直接进入其他页面
-  if((to.path == '/login' && from.path === '/') || (to.path == '/welcome' && from.path === '/login')) {
+  if ((to.path == '/login' && from.path === '/') || (to.path == '/welcome' && from.path === '/login')) {
     next()
   } else {
-    if(sessionStorage.getItem('profile') === null) {
+    console.log(store.state.userInfo.user)
+    if (!store.state.userInfo.user) {
       next('/login')
     } else {
       next()

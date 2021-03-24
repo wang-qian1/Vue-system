@@ -126,10 +126,11 @@
                 if (this.autoLogin == true) {
                   window.localStorage.setItem("autoLogin", this.autoLogin)
                 }
-                sessionStorage.setItem("user", JSON.stringify(data))
+                data.token = data.username
+                this.$store.dispatch('setUser', data)
                 this.$message({
                   type: 'success',
-                  message: '登录成功',
+                  message: '用户' + data.username + ',登录成功',
                   duration: 2000
                 })
                 this.$router.push({
@@ -147,7 +148,7 @@
                 }))
                 this.$message({
                   type: 'success',
-                  message: '登录成功',
+                  message: '用户' + data.username + ',登录成功',
                   duration: 2000
                 })
                 //登录成功 跳转到首页
